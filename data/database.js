@@ -7,6 +7,6 @@ export const connectdb = async () => {
     .connect(process.env.DB_LINK, {
       dbName: "Habatica",
     })
-    .then(() => console.log("database connected!"))
+    .then((c) => console.log(`database connected with ${c.connection.host}!`))
     .catch((e) => console.log(e));
 };
