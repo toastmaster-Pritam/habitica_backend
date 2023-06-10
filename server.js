@@ -29,7 +29,7 @@ app.use(
     credentials: true,
   })
 );
-
+app.get("/",(req,res)=>res.send("Working fine!"))
 //routes
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/task", taskRouter);
